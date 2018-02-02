@@ -1,0 +1,8 @@
+{
+  "name": "skill",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/wu0792/skill.git",
+  "author": "wu0792 <wu0792@163.com>",
+  "license": "MIT"
+}
