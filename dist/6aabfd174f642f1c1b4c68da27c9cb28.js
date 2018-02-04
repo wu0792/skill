@@ -69,7 +69,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({8:[function(require,module,exports) {
+})({3:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -95,7 +95,7 @@ const clone = target => {
 };
 
 exports.default = clone;
-},{}],4:[function(require,module,exports) {
+},{}],2:[function(require,module,exports) {
 'use strict';
 
 var _index = require('./deep-clone/index');
@@ -107,7 +107,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 console.log((0, _index2.default)(1));
 console.log((0, _index2.default)(true));
 console.log((0, _index2.default)(['hello', 'world']));
-},{"./deep-clone/index":8}],9:[function(require,module,exports) {
+},{"./deep-clone/index":3}],4:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -127,7 +127,7 @@ module.bundle.Module = Module;
 
 if (!module.bundle.parent && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
-  var ws = new WebSocket('ws://' + hostname + ':' + '5474' + '/');
+  var ws = new WebSocket('ws://' + hostname + ':' + '59022' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -228,5 +228,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[9,4])
+},{}]},{},[4,2])
 //# sourceMappingURL=/dist/6aabfd174f642f1c1b4c68da27c9cb28.map
