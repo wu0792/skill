@@ -2,11 +2,14 @@
 @top-cell-count: 4;
 @left-cell_count: 4;
 @work-cell-row-count: 10;
-@work-cell-col-count: 20;
+@work-cell-col-count: 3;
 @gap: 10px;
+@border-width: 0px;
+
 .block-area {
-    border: solid 1px gray;
+    border: solid @border-width gray;
     font-size: 14px;
+    background-color: saddlebrown;
 }
 
 .root {
@@ -16,7 +19,7 @@
 .block-container {
     text-align: left;
     display: inline-block;
-    width: @cell-size*30;
+    width: @cell-size*(@work-cell-col-count+@left-cell_count)+@gap+4*@border-width;
 }
 
 .logo-area {
@@ -26,7 +29,7 @@
 }
 
 .top-hint {
-    margin-left: @left-cell_count*@cell-size+@gap+1px;
+    margin-left: @left-cell_count*@cell-size+@gap+@border-width;
     height: @top-cell-count*@cell-size;
 }
 
@@ -39,6 +42,6 @@
 
 .work-area {
     height: @work-cell-row-count*@cell-size;
-    margin-left: @left-cell_count*@cell-size+@gap+2px;
+    margin-left: @left-cell_count*@cell-size+@gap+2*@border-width;
     margin-top: @gap;
 }
