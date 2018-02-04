@@ -1,0 +1,44 @@
+@cell-size: 20px;
+@top-cell-count: 4;
+@left-cell_count: 4;
+@work-cell-row-count: 10;
+@work-cell-col-count: 20;
+@gap: 10px;
+.block-area {
+    border: solid 1px gray;
+    font-size: 14px;
+}
+
+.root {
+    text-align: center;
+}
+
+.block-container {
+    text-align: left;
+    display: inline-block;
+    width: @cell-size*30;
+}
+
+.logo-area {
+    width: @cell-size*@left-cell_count;
+    height: @cell-size*@top-cell-count;
+    float: left;
+}
+
+.top-hint {
+    margin-left: @left-cell_count*@cell-size+@gap+1px;
+    height: @top-cell-count*@cell-size;
+}
+
+.left-hint {
+    width: @left-cell_count*@cell-size;
+    height: @work-cell-row-count*@cell-size;
+    float: left;
+    margin-top: @gap;
+}
+
+.work-area {
+    height: @work-cell-row-count*@cell-size;
+    margin-left: @left-cell_count*@cell-size+@gap+2px;
+    margin-top: @gap;
+}
