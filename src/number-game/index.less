@@ -2,14 +2,34 @@
 @top-cell-count: 4;
 @left-cell_count: 4;
 @work-cell-row-count: 10;
-@work-cell-col-count: 3;
+@work-cell-col-count: 10;
 @gap: 10px;
 @border-width: 0px;
+@font-size: 14px;
+body {
+    background-color: #1f384e;
+}
 
 .block-area {
     border: solid @border-width gray;
     font-size: 14px;
-    background-color: saddlebrown;
+    background-color: #f9f9f9;
+    .line {
+        font-size: 0;
+        .cell {
+            display: inline-block;
+            width: @cell-size;
+            height: @cell-size;
+            box-sizing: border-box;
+            font-size: @font-size;
+            border: solid 1px black;
+            text-align: center;
+            &:hover {
+                background-color: blueviolet;
+                color: #fff;
+            }
+        }
+    }
 }
 
 .root {
@@ -26,6 +46,8 @@
     width: @cell-size*@left-cell_count;
     height: @cell-size*@top-cell-count;
     float: left;
+    text-align: center;
+    line-height: @cell-size*@top-cell-count;
 }
 
 .top-hint {
